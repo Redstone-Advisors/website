@@ -13,6 +13,10 @@ right:0;
 z-index:99;
   display:flex;
   justify-content: space-between;
+  div{
+      font-weight: 300;
+
+  }
 `;
 const NavList = styled.ul`
 display: block;
@@ -22,7 +26,8 @@ display:flex;
 padding:0;
 margin:0;
 li{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
     margin-right: 2rem;
     &:last-child{
         margin-right: 0;
