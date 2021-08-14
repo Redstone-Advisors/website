@@ -27,24 +27,38 @@ line-height: 5rem;
 font-size: 3rem;
 top:40%;
 left: 50%;
+margin:0 auto;
+width:max-content;
 transform: translate(-50%, -50%);
+${({ theme }) =>`@media (max-width: ${theme.screens.laptop}) {
+ 
+   padding:1rem;
+  
+  }`}
 `
 const Teaser = styled.div`
 color: #fff;
 position: absolute;
-bottom:5%;
+bottom:0%;
 left: 50%;
-transform:translate(-50%, -50%);
+transform:translate(-50%, -30%);
 h2{
     margin-bottom: 1rem;
     font-size: 2rem;
     text-align: center;
 }
 div{
+    display: flex;
     margin-top:1.5rem;
     padding: 1rem 0;
     border-top: 3px solid gold;
     border-bottom: 3px solid gold;
+    ${({ theme }) =>`@media (max-width: ${theme.screens.laptop}) {
+    flex-direction:column;
+    align-items:center;
+    gap:1rem;
+
+}`}
 }
 span{
     font-size: 1.5rem;
