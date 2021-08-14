@@ -5,10 +5,20 @@ const Wrapper = styled.section`
   min-height:100vh;
   width:100%;
   overflow:hidden;
+  position: relative;
 `;
 const Video = styled.video`
 display:block;
 height:100vh;
+`;
+const Overlay = styled.div`
+top:0;
+left:0;
+right:0;
+bottom:0;
+position:absolute;
+background-color: rgba(0,0,0,0.5);
+
 `;
 const Headline = styled.h1`
 color: #fff;
@@ -22,13 +32,19 @@ transform: translate(-50%, -50%);
 const Teaser = styled.div`
 color: #fff;
 position: absolute;
-bottom:10%;
+bottom:5%;
 left: 50%;
 transform:translate(-50%, -50%);
 h2{
     margin-bottom: 1rem;
     font-size: 2rem;
     text-align: center;
+}
+div{
+    margin-top:1.5rem;
+    padding: 1rem 0;
+    border-top: 3px solid gold;
+    border-bottom: 3px solid gold;
 }
 span{
     font-size: 1.5rem;
@@ -41,6 +57,7 @@ span{
 const Home = () => {
     return (
         <Wrapper>
+            <Overlay/>
             <Video autoPlay loop muted id="videoBg">
                 <source src={background} type='video/mp4' />
             </Video>
