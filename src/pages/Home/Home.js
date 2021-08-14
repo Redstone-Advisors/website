@@ -4,12 +4,18 @@ import background from '../../assets/background.mp4'
 const Wrapper = styled.section`
   min-height:100vh;
   width:100%;
-  overflow:hidden;
+  overflow-x:hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
   position: relative;
 `;
 const Video = styled.video`
 display:block;
 height:100vh;
+position: absolute;
+z-index:-1;
 `;
 const Overlay = styled.div`
 top:0;
@@ -22,30 +28,32 @@ background-color: rgba(0,0,0,0.5);
 `;
 const Headline = styled.h1`
 color: #fff;
-position: absolute;
 line-height: 5rem;
 font-size: 3rem;
-top:40%;
-left: 50%;
-margin:0 auto;
-width:max-content;
-transform: translate(-50%, -50%);
+width: max-content;
+margin: 0 auto 7rem auto;
 ${({ theme }) =>`@media (max-width: ${theme.screens.laptop}) {
- 
+ width:auto;
    padding:1rem;
-  
+  text-align:center;
+  font-size:2.65rem;
+  }`}
+  ${({ theme }) =>`@media (max-width: ${theme.screens.mobile}) {
+  font-size:1.5rem;
+  line-height:3rem;
+  margin-bottom:0rem;
   }`}
 `
 const Teaser = styled.div`
 color: #fff;
-position: absolute;
-bottom:0%;
-left: 50%;
-transform:translate(-50%, -30%);
+padding: 1rem;
 h2{
     margin-bottom: 1rem;
     font-size: 2rem;
     text-align: center;
+    ${({ theme }) =>`@media (max-width: ${theme.screens.mobile}) {
+  font-size:1rem;
+  }`}
 }
 div{
     display: flex;
@@ -66,7 +74,20 @@ span{
     &:last-child{
         margin-right: 0;
     }
+    ${({ theme }) =>`@media (max-width: ${theme.screens.mobile}) {
+  font-size:1rem;
+  }`}
 }
+`
+const Container = styled.div`
+z-index:0;
+width: max-content;
+margin: 0 auto;
+padding:1rem 1rem 5rem 1rem;
+${({ theme }) =>`@media (max-width: ${theme.screens.mobile}) {
+ padding-bottom:0;
+  }`}
+
 `
 const Home = () => {
     return (
@@ -75,10 +96,12 @@ const Home = () => {
             <Video autoPlay loop muted id="videoBg">
                 <source src={background} type='video/mp4' />
             </Video>
+            <Container>
             <Headline>You created the wealth to retire<br></br>Now, which path will you take?</Headline>
             <Teaser><h2>May We Reccomend The Road Less Traveled</h2>
                 <div><span>Wealth Preservation</span><span>Income Optimizaton</span><span>Investment Specialization</span></div>
             </Teaser>
+            </Container>
         </Wrapper>
     )
 }

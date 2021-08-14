@@ -11,17 +11,19 @@ const Nav = styled.nav`
   display:block;
   position:fixed;
   top:0;
-left:0;
-right:0;
-z-index:99;
+  left:0;
+  right:0;
+  z-index:99;
   display:flex;
   justify-content: space-between;
   align-items: center;
   div{
       font-weight: 300;
-
+      ${({ theme }) =>`@media (max-width: ${theme.screens.mobile}) {
+  font-size:1.5rem;
+  }`}
   }
-`;
+`;  
 const NavList = styled.ul`
  ${({ theme }) =>`@media (max-width: ${theme.screens.laptop}) {
     display:none;
