@@ -11,11 +11,23 @@ const Wrapper = styled.section`
   justify-content: center;
   position: relative;
 `;
+const VideoWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+`;
 const Video = styled.video`
-display:block;
-height:100vh;
-position: absolute;
-z-index:-1;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
 `;
 const Overlay = styled.div`
 top:0;
@@ -93,9 +105,11 @@ const Home = () => {
     return (
         <Wrapper>
             <Overlay/>
-            <Video autoPlay loop muted id="videoBg">
-                <source src={background} type='video/mp4' />
-            </Video>
+      <VideoWrapper>
+        <Video autoPlay loop muted id="videoBg">
+          <source src={background} type="video/mp4" />
+        </Video>
+      </VideoWrapper>
             <Container>
             <Headline>You created the wealth to retire<br></br>Now, which path will you take?</Headline>
             <Teaser><h2>May We Reccomend The Road Less Traveled</h2>
