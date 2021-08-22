@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-import background from '../../assets/background.mp4'
+import background from '../../assets/twopaths.jpg'
 const Wrapper = styled.section`
   min-height:100vh;
   width:100%;
@@ -19,7 +19,7 @@ const VideoWrapper = styled.div`
   height: 100%;
   overflow: hidden;
 `;
-const Video = styled.video`
+const Video = styled.img`
   min-width: 100%;
   min-height: 100%;
   position: absolute;
@@ -106,9 +106,7 @@ const Home = () => {
         <Wrapper>
             <Overlay/>
       <VideoWrapper>
-        <Video autoPlay loop muted id="videoBg">
-          <source src={background} type="video/mp4" />
-        </Video>
+        <Video id="videoBg" src={background}/>
       </VideoWrapper>
             <Container>
             <Headline>You created the wealth to retire<br></br>Now, which path will you take?</Headline>
