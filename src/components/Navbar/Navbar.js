@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {MenuOutlined} from '@ant-design/icons'
 import{ useState } from 'react';
 import { Drawer } from 'antd'
+import {Link, NavLink} from 'react-router-dom'
 
 const Nav = styled.nav`
   font-size: 32px;
@@ -38,6 +39,11 @@ li{
     font-size: 1.25rem;
     font-weight: 600;
     margin-right: 2rem;
+    a{
+      color: inherit;
+      text-decoration:none;
+    
+    }
     &:last-child{
         margin-right: 0;
     }
@@ -56,6 +62,10 @@ font-size:1.5rem;
 font-weight: 600;
 li{
     padding: 1rem;
+    a{
+      color: inherit;
+      text-decoration:none;
+    }
 }
 `
 
@@ -74,11 +84,11 @@ const Navbar = () => {
         <Nav> 
             <div>Redstone Advisors</div>
             <NavList>
-                <li>Who We Are</li>
-                <li>What We Do</li>
-                <li>Why Redstone</li>
-                <li>Blog</li>
-                <li>FAQ</li>
+                <li><Link to='/who'>Who We Are</Link></li>
+                <li><Link to='/what'>What We Do</Link></li>
+                <li><Link to='/why'>Why Redstone</Link></li>
+                <li><Link to='/blog'>Blog</Link></li>
+                <li><Link to='/faq'>FAQ</Link></li>
             </NavList>
             <NavButton onClick={showDrawer}/>
             <Drawer
@@ -88,11 +98,11 @@ const Navbar = () => {
         visible={visible}
       >
             <MobileNavList style={{color:'#424242'}}>
-                <li>Who We Are</li>
-                <li>What We Do</li>
-                <li>Why Redstone</li>
-                <li>Blog</li>
-                <li>FAQ</li>
+            <li><Link to='/who'>Who We Are</Link></li>
+                <li><Link to='/what'>What We Do</Link></li>
+                <li><Link to='/why'>Why Redstone</Link></li>
+                <li><Link to='/blog'>Blog</Link></li>
+                <li><Link to='/faq'>FAQ</Link></li>
             </MobileNavList>
       </Drawer>
         </Nav>
