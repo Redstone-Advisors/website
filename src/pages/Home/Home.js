@@ -7,7 +7,7 @@ const Wrapper = styled.section`
   overflow-x:hidden;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   position: relative;
 `;
@@ -43,7 +43,7 @@ color: #fff;
 line-height: 5rem;
 font-size: 3rem;
 width: max-content;
-margin: 0 auto 7rem auto;
+margin: 10rem auto 5rem auto;
 ${({ theme }) =>`@media (max-width: ${theme.screens.laptop}) {
  width:auto;
    padding:1rem;
