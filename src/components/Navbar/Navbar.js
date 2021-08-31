@@ -114,7 +114,7 @@ const Navbar = () => {
       </Top>
       <Bottom>
         <Logo>
-          <h1>Redstone Advisors</h1>
+          <h1>Redstone Advisors, Inc</h1>
           <span>A Timeless Approach A Unique Perspective</span>
         </Logo>
         <NavList>
@@ -126,9 +126,6 @@ const Navbar = () => {
           </li>
           <li>
             <Link to="/why">Why</Link>
-          </li>
-          <li>
-            <Link to="/philosophy">Philosophy</Link>
           </li>
           <li>
             <Link to="/blog">Blog</Link>
@@ -154,9 +151,6 @@ const Navbar = () => {
             </li>
             <li>
               <Link to="/why">Why</Link>
-            </li>
-            <li>
-              <Link to="/philosophy">Philosophy</Link>
             </li>
             <li>
               <Link to="/blog">Blog</Link>
