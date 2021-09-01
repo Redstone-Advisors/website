@@ -79,23 +79,32 @@ const Top = styled.div`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 0;
   margin: 0;
 `;
 const Logo = styled.div`
+  display: flex;
+  flex-direction: column;
   h1 {
     padding: 0;
     margin: 0;
     line-height: 5px;
+    padding-bottom: 1rem;
   }
-  span {
-    font-size: 17px;
-    padding: 0;
-    margin: 0;
-    font-weight: 500;
-    font-family: "EB Garamond", serif;
-  }
+`;
+const Tag = styled.span`
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  padding-bottom: 5px; ;
+`;
+const SEC = styled.span`
+  font-size: 12px;
+  font-weight: 400;
+  color: #d8d8d8;
 `;
 
 const Navbar = () => {
@@ -115,17 +124,18 @@ const Navbar = () => {
       <Bottom>
         <Logo>
           <h1>Redstone Advisors, Inc</h1>
-          <span>A Timeless Approach A Unique Perspective</span>
+          <SEC>An SEC Registered Investment Advisory Firm</SEC>
         </Logo>
+        <Tag>A Timeless Approach A Unique Perspective</Tag>
         <NavList>
           <li>
-            <Link to="/who">Who</Link>
+            <Link to="/who">Who We Are</Link>
           </li>
           <li>
-            <Link to="/what">What</Link>
+            <Link to="/what">What We Do</Link>
           </li>
           <li>
-            <Link to="/why">Why</Link>
+            <Link to="/why">Why Us</Link>
           </li>
           <li>
             <Link to="/blog">Blog</Link>

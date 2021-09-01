@@ -42,7 +42,7 @@ const Headline = styled.h1`
   line-height: 5rem;
   font-size: 3rem;
   width: max-content;
-  margin: 0 auto 20vh auto;
+  margin: 0 auto 5vh auto;
   ${({ theme }) => `@media (max-width: ${theme.screens.laptop}) {
  width:auto;
    padding:1rem;
@@ -102,6 +102,15 @@ const Container = styled.div`
 
 const Button = styled.button`
   background-color: gold;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  border: none;
+  color: #383838;
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+  width: max-content;
+  margin: 0 auto 20vh auto;
 `;
 const Home = () => {
   return (
@@ -115,8 +124,9 @@ const Home = () => {
           You created the wealth to retire<br></br>Now, which path will you
           take?
         </Headline>
+        <Button>Get Started</Button>
         <Teaser>
-          <h2>May We Reccomend The Road Less Traveled</h2>
+          <h2>May We Reccomend the One Less Traveled</h2>
           <div>
             <span>Wealth Preservation</span>
             <span>Income Optimizaton</span>
