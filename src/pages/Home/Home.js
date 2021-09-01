@@ -111,6 +111,10 @@ const Button = styled.button`
   display: block;
   width: max-content;
   margin: 0 auto 20vh auto;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 const Home = () => {
   return (

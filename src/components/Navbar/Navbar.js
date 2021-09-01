@@ -89,8 +89,6 @@ const Logo = styled.div`
   h1 {
     padding: 0;
     margin: 0;
-    line-height: 5px;
-    padding-bottom: 1rem;
   }
 `;
 const Tag = styled.span`
